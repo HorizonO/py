@@ -44,4 +44,4 @@ print('删除前形状',data2.shape)
 print('删除后形状',data_not_null.shape)
 #把过滤后的数据写入一个名为new_Cars_Data.xlsx的文件里，用于之后的图形化分析，和模型构建
 data_not_null.to_excel("new_Cars_Data.xlsx")
-print("Finish!")
+print("Finish! 07cxl")#个人标识

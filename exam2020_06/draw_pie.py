@@ -6,6 +6,7 @@ data = pd.read_excel("new_Cars_Data.xlsx")
 
 dataList = data['品牌'].value_counts()
 # print(dataList)
+#把数据得出新的csv文件
 # dataList.to_csv("品牌统计.csv")
 # plt.figure(figsize=(6,6))
 
@@ -38,9 +39,10 @@ dataList = data['品牌'].value_counts()
 #     for row in reader:
 #         print(row)
 
-
+#读取新数据
 df = pd.read_csv('品牌统计2.csv',index_col=0)
 print(type(df))
+#把汽车品牌和数量统计出来
 result_dic = df.groupby('brand')['count'].apply(int).to_dict()
 print(result_dic)
 label = []
@@ -56,7 +58,7 @@ for key,value in result_dic.items():
 print(label)
 
 
-
+#作图函数
 def DrawPie():
     plt.rcParams['font.sans-serif'] = 'SimHei'  # 设置中文显示
     plt.rcParams['axes.unicode_minus'] = False
@@ -79,6 +81,7 @@ def DrawPie():
 
 
 DrawPie()
+print('07陈旭霖')
 # plt.figure(figsize=(8,8))
 # label = []
 # explode = [0.01]
